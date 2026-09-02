@@ -90,7 +90,7 @@ composer install
 composer test
 ```
 
-Other checks (also run in CI on PHP 8.3 and 8.4):
+Other checks (also run in CI on PHP 8.4):
 
 ```sh
 composer lint    # Pint, formatting
@@ -107,7 +107,7 @@ Tests use an in memory SQLite database; no services to start.
 - **PHPStan + Larastan** (`phpstan.neon`): level 8, `app/`, `routes/` and
   `database/factories/`. Level 8 is realistic here only because the codebase is
   small and clean; on a legacy codebase you would start lower and ratchet up.
-- **CI** (`.github/workflows/ci.yml`): Pint, PHPStan, Pest on PHP 8.3 and 8.4.
+- **CI** (`.github/workflows/ci.yml`): Pint, PHPStan, Pest on PHP 8.4.
 - **`hooks/pre-commit`**: the same three checks locally. Enable with
   `ln -sf ../../hooks/pre-commit .git/hooks/pre-commit` (see `hooks/README.md`).
 
