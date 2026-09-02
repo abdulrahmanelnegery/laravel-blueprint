@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+#
+# Runs the same three checks as CI before a commit is allowed.
+# Enable it with a symlink (see hooks/README.md):
+#
+#   ln -sf ../../hooks/pre-commit .git/hooks/pre-commit
+#
+# Bypass for one commit with: git commit --no-verify
+
+set -e
+
+echo "> pint --test"
+vendor/bin/pint --test
+
+echo "> phpstan analyse"
+vendor/bin/phpstan analyse --no-progress
+
+echo "> pest"
+vendor/bin/pest
