@@ -2,7 +2,7 @@
 
 How I structure a Laravel app: layering, domain modeling, testing, tooling.
 
-![CI](https://github.com/abdulrahman-muhammed-07/laravel-blueprint/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/abdulrahmanelnegery/laravel-blueprint/actions/workflows/ci.yml/badge.svg)
 
 This is a small, honest reference, not a product. The domain is deliberately
 generic (invoicing: customers, invoices, invoice lines, a per year number
